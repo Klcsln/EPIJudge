@@ -8,7 +8,24 @@ using std::vector;
 enum class Color { kRed, kWhite, kBlue };
 
 void DutchFlagPartition(int pivot_index, vector<Color>* A_ptr) {
-  // TODO - you fill in here.
+    vector<Color>& A = *A_ptr;
+    vector<Color> l, m, r;
+
+    for (Color i : A) {
+        if (i < A[pivot_index]) {
+            l.push_back(i);
+        }
+        else if (i == A[pivot_index]) {
+            m.push_back(i);
+        }
+        else {
+            r.push_back(i);
+        }
+    }
+    A = l;
+    A.insert(A.end(), m.begin(), m.end());
+    A.insert(A.end(), r.begin(), r.end());
+
   return;
 }
 void DutchFlagPartitionWrapper(TimedExecutor& executor, const vector<int>& A,

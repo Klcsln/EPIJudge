@@ -5,12 +5,22 @@
 using std::string;
 
 string IntToString(int x) {
-  // TODO - you fill in here.
-  return "0";
+    int is_negative = false;
+    if (x < 0) {
+        is_negative = true;
+    }
+    string s;
+    do {
+        s += '0' + x % 10;
+    } while (x);
+    s += is_negative ? "-" : "";
+
+    return {rbegin(s), rend(s)};
 }
 int StringToInt(const string& s) {
-  // TODO - you fill in here.
-  return 0;
+    return (s[0] == '-' ? -1 : 1) * std::accumulate(begin(s) + (s[0] == '-'), end(s), 0,
+        [](int running_sum, char c) {
+            return running_sum * 10 + c - '0'; });
 }
 void Wrapper(int x, const string& s) {
   if (stoi(IntToString(x)) != x) {

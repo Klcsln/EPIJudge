@@ -172,7 +172,7 @@ problem_mapping = {
     "Chapter 05: Arrays": {
         "5.00 Bootcamp: Arrays": {
             "C++: even_odd_array.cc": {
-                "passed": 0,
+                "passed": 1001,
                 "total": 1001
             },
             "Java: EvenOddArray.java": {
@@ -186,7 +186,7 @@ problem_mapping = {
         },
         "5.01 The Dutch national flag problem": {
             "C++: dutch_national_flag.cc": {
-                "passed": 0,
+                "passed": 204,
                 "total": 204
             },
             "Java: DutchNationalFlag.java": {
@@ -468,7 +468,7 @@ problem_mapping = {
     "Chapter 06: Strings": {
         "6.00 Bootcamp: Strings": {
             "C++: is_string_palindromic.cc": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             },
             "Java: IsStringPalindromic.java": {
@@ -746,7 +746,7 @@ problem_mapping = {
         },
         "7.05 Test for overlapping lists---lists may have cycles": {
             "C++: do_lists_overlap.cc": {
-                "passed": 0,
+                "passed": 3,
                 "total": 120
             },
             "Java: DoListsOverlap.java": {
