@@ -5,8 +5,7 @@ short CountBits(unsigned int x) {
     while (x) {
         numOfBits += x & 1;
         x >>= 1;
-    }
-    return numOfBits;
+    } return numOfBits;
 }
 
 int main(int argc, char* argv[]) {
