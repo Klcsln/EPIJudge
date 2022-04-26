@@ -7,6 +7,8 @@ unsigned long long ClosestIntSameBitCount(unsigned long long x) {
             return x;
         }
     }
+
+    throw std::invalid_argument("Bits are all 0 or all 1");
 }
 
 int main(int argc, char* argv[]) {

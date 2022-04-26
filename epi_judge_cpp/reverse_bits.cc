@@ -5963,7 +5963,7 @@ static array<unsigned long long, 1 << 16> precomputed_reverse{
 
 unsigned long long ReverseBits(unsigned long long x) {
     const int kMaskSize = 16;
-    const int kBitMask = 0xFFF;
+    const int kBitMask = 0xFFFF;
     return precomputed_reverse[x & kBitMask] << (3 * kMaskSize) |
         precomputed_reverse[(x >> kMaskSize) & kBitMask] << (2 * kMaskSize) |
         precomputed_reverse[(x >> (2 * kMaskSize)) & kBitMask] << kMaskSize |

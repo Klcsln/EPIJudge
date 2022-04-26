@@ -20,8 +20,8 @@ int UniformRandom(int lower_bound, int upper_bound) {
     int numberOfOutcomes = upper_bound - lower_bound + 1, result;
     do {
         result = 0;
-        for (int i = 0; (i << i) < numberOfOutcomes; ++i) {
-            result = (result << i) | ZeroOneRandom();
+        for (int i = 0; (1 << i) < numberOfOutcomes; ++i) {
+            result = (result << 1) | ZeroOneRandom();
         }
     } while (result >= numberOfOutcomes);
     return result + lower_bound;

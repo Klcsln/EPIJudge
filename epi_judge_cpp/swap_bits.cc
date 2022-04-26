@@ -1,9 +1,9 @@
 #include "test_framework/generic_test.h"
 long long SwapBits(long long x, int i, int j) {
     // Extract and check if ith and jth bits are different
-    if (((x >> i) & 1) != ((x >> j) & 1)) {
+    if(((x >> i) & 1) != ((x >> j) & 1)){
         unsigned long long mask = (1ULL << i) | (1ULL << j);
-        x ^= mask;
+        x^= mask;
     }
     return x;
 }
