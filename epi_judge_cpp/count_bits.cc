@@ -4,7 +4,7 @@ short CountBits(unsigned int x) {
     short numBits = 0;
     while(x){
         numBits += x & 1;
-        x >> 1;
+        x >>= 1;
     }
     return numBits;
 }
